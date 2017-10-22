@@ -1,0 +1,643 @@
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 12px;
+  color: #000;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  background: #dedfc7;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+figure {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 1345px;
+  margin: 0 auto;
+}
+
+section {
+  width: 320px;
+  height: 265px;
+  float: left;
+  margin: 0 15px 15px 0;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+section:nth-child(4n) {
+  margin-right: 0;
+}
+
+section header {
+  position: relative;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.add {
+  position: absolute; /**/
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  background: #10174c;
+  border: none;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+}
+
+.add::after {
+  content: "";
+  background: url("../img/icons.png") no-repeat;
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-position: 2px -23px;
+}
+
+.right {
+  position: absolute;
+  top: 15px;/**/
+  right: 15px;/**/
+  color: #fff;
+}
+
+.contain {
+  padding: 15px;
+}
+
+.right-icons { /**/
+  border: none;
+  background: url("../img/icons.png") no-repeat;
+  cursor: pointer;
+}
+
+.info {
+  height: 18px;
+}
+
+.plus {
+  background-position: -3px -24px;
+  height: 15px;
+  width: 15px;
+}
+
+.departure {
+  background-position: -3px -300px;
+  height: 13px;
+  width: 15px;
+  /*
+  background: #fbc02d;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;*/
+}
+
+.arrival {
+  background-position: -3px -272px;
+  height: 15px;
+  width: 15px;
+  /*
+  background: #283593;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;*/
+}
+
+.clock {
+  background-position: -3px -225px;
+  height: 18px;
+  width: 18px;
+}
+
+/*weather*/
+.left {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.weather {
+  background: #283593;
+}
+
+.weather main {
+  position: relative;
+}
+
+.degree {
+  font-size: 66px;
+  color: #fff;
+}
+
+.forecast {
+  background: url(../img/weather.png);
+  width: 195px;
+  height: 144px;
+  position: absolute;
+  top: 42px;
+  right: -34px;
+}
+
+.forecast-mountains {
+  background-position: 195px 0;
+}
+
+.time {
+  background: #fff;
+  height: 100%;
+  z-index: 1;
+  position: inherit;
+}
+
+.time li {
+  display: inline-block;
+  font-size: 14px;
+  padding: 30px 13px 25px 13px;
+}
+
+
+/**/
+.time input {
+  width: 100%;
+}
+
+input[type='range'] {
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  padding: 0px;
+  margin: 0px;
+  height: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container:after {
+  position: absolute;
+  color: #777;
+  content: '09:00 12:00 15:00 18:00 21:00';
+  padding: 10px;
+  margin-left: 10px;
+  word-spacing: 20px;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+.container {
+  padding: 0px;
+  position: relative;
+}
+
+output{
+  display: block;
+  margin-top: 50px;
+  color: #777;
+}
+output:before{
+  content:"Selected Value: ";
+  font-weight: bold;
+}
+
+/**/
+
+
+
+
+
+
+
+
+
+
+/*audio / video*/
+
+.audio-video {
+  background: #10174c;
+}
+
+/*calendar*/
+.calendar,
+.calendar-table thead {
+  background: #10174c;
+}
+
+.calendar select {
+  background: #10174c;
+  border: none;
+}
+
+.calendar-table {
+  color: #fff;
+  border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+  width: 45px;
+  height: 33px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.calendar main {
+  background: #283593;
+  height: 100%;
+}
+
+.passed {
+  color: #949ac9;
+}
+
+.today {
+  border-radius: 50%;
+  background: #e91e63;
+  /*width: 25px;
+  height: 25px;*/
+  padding: 3px;
+}
+
+.scheduled {
+  position: relative;
+}
+
+.scheduled::after {
+  content: "";
+  background: #fbc02d;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: 4px;
+}
+
+/*Got to do*/
+.got-to-do {
+  background: #fce68d;
+  font-size: 14px;
+  color: #212121;
+}
+
+.got-to-do .left { /**/
+  font-size: 14px;
+  color: #212121;
+  text-transform: none;
+}
+
+.got-to-do header {
+  background: #fbc02d;
+}
+
+.got-to-do li {
+  padding: 20px 0;
+  border-bottom: dotted 1px #c9b770;
+}
+
+.got-to-do li:last-child {
+  border: none;
+}
+
+.got-to-do input[type="checkbox"] {
+  margin-right: 18px;
+}
+
+/*remind me*/
+.remind-me {
+  background: #fff;
+}
+
+.remind-me header {
+  background: #283593;
+}
+
+.remind-me li {
+  padding: 20px 0;
+  border-bottom: dotted 1px #c9b770;
+}
+
+.remind-me li:last-child {
+  border: none;
+}
+
+.remind-me input[type="checkbox"] {
+  margin-right: 18px;
+}
+
+.remind-me .add {
+  background: #e91e63;
+}
+
+/*holidays*/
+.holidays {
+  background: #fff;
+}
+
+.holidays header {
+  background: #283593;
+}
+
+/*sales volume*/
+.sales-volume {
+  background: #10174c;
+}
+
+.sales-volume li {
+  display: inline-block;
+}
+
+/*Activity*/
+.activity {
+  background: #10174c;
+}
+
+.activity input {
+  right: 1000px;
+}
+
+.circle-graph {
+  text-align: center;
+  position: relative;
+}
+
+.circle-graph p {
+  font-size: 24px;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  color: #fff;
+}
+
+.bicicle {
+  background-position: -3px -225px;
+  height: 18px;
+  width: 18px;
+}
+
+.men {
+  background-position: -3px -225px;
+  height: 18px;
+  width: 18px;
+}
+
+/*Rating*/
+.rating {
+  background: #10174c;
+}
+
+.rating li {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.outer {
+  width: 10px;
+  height: 130px;
+  overflow: hidden;    
+  position: relative;
+  border-radius: 4px;
+  background: #1c2670;
+}
+
+.inner {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;  
+  bottom: 0;
+  height: 50%;
+  background-color: #f6be1a;    
+}
+
+.rate {
+  color: #fff;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/*Calculator*/
+.calculator {
+  background: #283593;
+}
+
+.calculator header {/**/
+  background: #fff;
+}
+
+.calculator input {
+  border: none;
+  font-size: 32px;
+  width: 320px;
+  text-align: right;
+  padding: 20px 0px;
+  position: relative;
+  right: 40px;
+}
+
+.calculator button {
+  padding: 7px 19px;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.calculator-table th,
+.calculator-table td {
+  
+}
+
+/*Country*/
+.country {
+  background-color: #e91e63;
+  background-image: url("../img/statue.jpg");
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.country select {
+  background: none;
+  border: none;
+}
+
+.country option {
+  background-color: #e91e63;
+}
+
+.country main {
+  position: absolute;
+  bottom: 0;
+}
+
+.country-time {
+  font-size: 60px;
+}
+
+.country-day {
+  font-size: 18px;
+}
+
+.country-day span {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/*Starts in*/
+.starts-in {
+  background: #10174c;
+}
+
+.first-half {
+  background: #283593;
+  height: 100%;
+  width: 160px;
+  text-align: center;
+  float: left;
+}
+
+.second-half {
+  width: 160px;
+  text-align: center;
+  display: inline-block;
+}
+
+.number {
+  font-size: 96px;
+  color: #fff;
+}
+
+.measure {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/*Translate*/
+.translate {
+  background: #10174c;
+}
+
+.translate header{
+  background: #fff;
+  height: 50%;
+  text-align: center;
+}
+
+.translate input {
+  border: none;
+  border-bottom: #e91e63 solid 2px;
+  width: 285px;
+  margin-top: 25px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+.translate select,
+.translate option {
+  background: #10174c;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.translate p {
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0px 0 5px;
+}
+
+.translation {
+  position: absolute; /**/
+  right: 15px;
+  bottom: 115px;
+  border-radius: 50%;
+  background: #e91e63;
+  border: none;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+}
+
+.translation::after {
+  content: "";
+  background: url("../img/icons.png") no-repeat;
+  width: 22px;
+  height: 21px;
+  display: block;
+  background-position: 0px -250px;
+}
+
+/*Shedule*/
+.schedule {
+  background: #10174c;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.date {
+  font-size: 48px;
+}
+
+time {
+  font-size: 21px;
+}
+
+.plain {
+  position: relative;
+}
+
+.plain-icon {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  background: url(../img/icons.png) no-repeat;
+  background-position: 0 -327px;
+  width: 45px;
+  height: 27px;
+}
+
+.line {
+  width: 170px;
+  height: 1px;
+  background: #fbc02d;
+  display: inline-block;
+  position: relative;
+  top: -4px;
+}

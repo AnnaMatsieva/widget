@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+	<head>
+		<title>Widget</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />	
+	</head>
+	<body>
+		<div class="wrapper">
+			<section class="weather">
+				<header class="contain">
+					<p class="left">Madrid</p>
+					<div class="right">
+						<button class="right-icons info"></button>
+					</div>
+				</header>
+				<main class="contain">
+					<p class="degree">24&deg;</p>
+					<div class="forecast"></div>
+				</main>
+				<footer class="time">
+					
+					<!--ul>
+						<li><time datetime="9:00">9:00</time></li>
+						<li><time datetime="12:00">12:00</time></li>
+						<li><time datetime="15:00">15:00</time></li>
+						<li><time datetime="18:00">18:00</time></li>
+						<li><time datetime="21:00">21:00</time></li>
+					</ul-->
+
+<div class="container">
+  <input type="range" min="1" max="24" value="3" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
+  <datalist id="tickmarks">
+    <option value="0 to 24">9</option>
+    <option>12</option>
+    <option>15</option>
+    <option>18</option>
+    <option>21</option>
+    <option>24</option>
+  </datalist>
+  <output id="output" for="rangeInput"></output> <!--  -->
+</div>
+				</footer>
+			</section>
+
+			<section class="weather">		
+				<header class="contain">
+					<p class="left">Himalays</p>
+					<div class="right">
+						<button class="right-icons info"></button>
+					</div>
+				</header>
+				<main class="contain">
+					<p class="degree">-18&deg;</p>
+					<div class="forecast forecast-mountains"></div>
+				</main>
+				<footer class="time"></footer>
+			</section>
+
+			<section class="audio-video">		
+				<header class="contain">
+					<p class="left">Nirvana</p>
+					<div class="right">
+						<p>01:24/3:55</p>
+					</div>
+				</header>
+				<main>
+					<audio controls>
+					    <source src="audio/music.ogg" type="audio/ogg; codecs=vorbis">
+					    <source src="audio/music.mp3" type="audio/mpeg">
+					    Тег audio не поддерживается вашим браузером. 
+					    <a href="audio/music.mp3">Скачайте музыку</a>.
+				  	</audio>
+				</main>
+				<footer class="time"></footer>
+			</section>
+				
+			<section class="audio-video">		
+				<header></header>
+				<main>
+					<video width="400" height="300" controls="controls" poster="video/duel.jpg">
+						<source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+						<source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						<source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
+						Тег video не поддерживается вашим браузером. 
+						<a href="video/duel.mp4">Скачайте видео</a>.
+					</video>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="calendar">		
+				<header class="contain">
+					<select class="left">
+						<option>June 2015</option>
+						<option>July 2015</option>
+						<option>August 2015</option>
+					</select>
+					<div class="right">
+						<button class="right-icons plus"></button>
+					</div>
+				</header>
+				<main>
+					<table class="calendar-table">
+						<thead>
+							<tr>
+								<th><a href="">Mon</a></th>
+								<th><a href="">Tue</a></th>
+								<th><a href="">Wed</a></th>
+								<th><a href="">Thu</a></th>
+								<th><a href="">Fri</a></th>
+								<th><a href="">Sat</a></th>
+								<th><a href="">Sun</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href=""><span></span></a></td>
+								<td><a href=""><span></span></a></td>
+								<td><a href=""><span></span></a></td>
+								<td><a href=""><span></span></a></td>
+								<td><a href=""><span class="passed today scheduled">1</span></a></td>
+								<td><a href=""><span class="passed">2</span></a></td>
+								<td><a href=""><span class="passed">3</span></a></td>
+							</tr>
+							<tr>
+								<td><a href=""><span class="passed">4</span></a></td>
+								<td><a href=""><span class="passed">5</span></a></td>
+								<td><a href=""><span class="passed">6</span></a></td>
+								<td><a href=""><span class="passed">7</span></a></td>
+								<td><a href=""><span class="passed">8</span></a></td>
+								<td><a href=""><span class="passed">9</span></a></td>
+								<td><a href=""><span class="today scheduled">10</span></a></td>
+							</tr>
+							<tr>
+								<td><a href=""><span>11</span></a></td>
+								<td><a href=""><span class="scheduled today passed">12</span></a></td>
+								<td><a href=""><span>13</span></a></td>
+								<td><a href=""><span>14</span></a></td>
+								<td><a href=""><span>15</span></a></td>
+								<td><a href=""><span>16</span></a></td>
+								<td><a href=""><span>17</span></a></td>
+							</tr>
+							<tr>
+								<td><a href=""><span class="scheduled">18</span></a></td>
+								<td><a href=""><span>19</span></a></td>
+								<td><a href=""><span>20</span></a></td>
+								<td><a href=""><span>21</span></a></td>
+								<td><a href=""><span>22</span></a></td>
+								<td><a href=""><span>23</span></a></td>
+								<td><a href=""><span>24</span></a></td>
+							</tr>
+							<tr>
+								<td><a href=""><span>25</span></a></td>
+								<td><a href=""><span>26</span></a></td>
+								<td><a href=""><span>27</span></a></td>
+								<td><a href=""><span>28</span></a></td>
+								<td><a href=""><span>29</span></a></td>
+								<td><a href=""><span>30</span></a></td>
+								<td><a href=""><span>31</span></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="got-to-do">
+				<header class="contain">
+					<p class="left">Got to do...</p>
+					<div class="right">
+						<button class="right-icons info"></button>
+					</div>
+				</header>
+				<main  class="contain">
+					<ul>
+						<li>
+							<label><input type="checkbox">Restaurant reservations</label>
+						</li>
+						<li>
+							<label><input type="checkbox">Fix the broken door</label>
+						</li>
+						<li>
+							<label><input type="checkbox">Buy new batteries</label>
+						</li>
+					</ul>
+					<button class="add"></button>
+				</main>
+				<footer></footer>	
+			</section>
+
+			<section class="remind-me">
+				<header class="contain">
+					<p class="left">Remind me to...</p>
+					<div class="right">
+						<button class="right-icons info"></button>
+					</div>
+				</header>
+				<main  class="contain">
+					<ul>
+						<li>
+							<label><input type="checkbox">Pick ap the Tickets at 16:00</label>
+						</li>
+						<li>
+							<label><input type="checkbox">Meeting with David at 17:00</label>
+						</li>
+						<li>
+							<label><input type="checkbox">Send Email to Sarah</label>
+						</li>
+					</ul>
+					<button class="add"></button>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="holidays">
+				<header class="contain">
+					<p class="left">Friday</p>
+					<div class="right">
+						<p>12.06.15</p>
+					</div>
+				</header>
+				<main  class="contain">
+					<figure>
+						<img src="img/cake.png" alt="cake">
+						<figcaption>
+							<p>James Birthday</p>
+						</figcaption>
+					</figure>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="sales-volume">
+				<header class="contain">
+					<p class="left">Sales volume</p>
+					<div class="right">
+						<p>Store A</p>
+						<p>Store B</p>
+					</div>
+				</header>
+				<main>
+					<figure>
+						<img src="img/figure-graph.png" alt="graph" />
+						<figcaption>
+							<ul>
+								<li><a href="">Jun</a></li>
+								<li><a href="">Jul</a></li>
+								<li><a href="">Aug</a></li>
+							</ul>
+						</figcaption>
+					</figure>
+				</main>
+			</section>
+
+			<section class="activity">
+				<header class="contain">
+					<p class="left">Activity</p>
+					<div class="right">
+						<form>
+							<label class="right-icons bicicle">
+								<input type="radio" />
+							</label>
+							<label class="right-icons bicicle">
+								<input type="radio" class="right-icons men" />
+							</label>
+						</form>
+					</div>
+				</header>
+				<main  class="contain">
+					<div class="circle-graph">
+						<img src="img/circle-graph.png" alt="graph">
+						<p class="percent">75%</p>
+					</div>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="rating">
+				<header class="contain">
+					<p class="left">Rating</p>
+				</header>
+				<main  class="contain">
+					<ul>
+						<li>
+							<div class="outer"> <!---->
+								<div class="inner"></div>
+							</div>
+							<div class="rate">1</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">2</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">3</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">4</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">5</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">6</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">7</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">8</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">9</div>
+						</li>
+						<li>
+							<div class="outer">
+								<div class="inner"></div>
+							</div>
+							<div class="rate">10</div>
+						</li>
+					</ul>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="calculator">
+				<header>
+					<form>
+						<input type="text" value="325.075">
+					</form>
+				</header>
+				<main>
+					<table class="calculator-table">
+						<tr>
+							<td><button>cc</button></td>
+							<td><button>ce</button></td>
+							<td><button>c</button></td>
+							<td><button>+-</button></td>
+							<td><button>pp</button></td>
+						</tr>
+						<tr>
+							<td><button>7</button></td>
+							<td><button>8</button></td>
+							<td><button>9</button></td>
+							<td><button>/</button></td>
+							<td><button>%</button></td>
+						</tr>
+						<tr>
+							<td><button>4</button></td>
+							<td><button>5</button></td>
+							<td><button>6</button></td>
+							<td><button>*</button></td>
+							<td><button>1/x</button></td>
+						</tr>
+						<tr>
+							<td><button>1</button></td>
+							<td><button>2</button></td>
+							<td><button>3</button></td>
+							<td><button>-</button></td>
+							<td><button></button></td>
+						</tr>
+						<tr>
+							<td><button>0</button></td>
+							<td><button></button></td>
+							<td><button>.</button></td>
+							<td><button>+</button></td>
+							<td><button>=</button></td>
+						</tr>
+					</table>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="country">
+				<header class="contain">
+					<select class="left">
+						<option>New York</option>
+						<option>Paris</option>
+					</select>
+					<div class="right">
+						<button class="right-icons clock"></button>
+					</div>
+				</header>
+				<main class="contain">
+					<time datetime="11:55 Saturday, June 27">
+						<p class="country-time">11:55</p>
+						<p class="country-day">Saturday, June 27 - <span>EDT</span></p>
+					</time>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="starts-in clearfix">
+				<div class="contain">
+					<header>
+						<p class="left">Starts in</p>
+					</header>
+				</div>
+				<div class="first-half">
+					<p class="number">0</p>
+					<p class="measure">Days</p>						
+				</div>
+				<div class="second-half">
+					<p class="number">3</p>
+					<p class="measure">Hours</p>				
+				</div>
+			</section>
+
+			<section class="translate"><!---->
+				<header>
+					<input type="text" value="Bem-vindo ao Rio de Janeiro" />
+				</header>
+				<main class="contain">
+					<select>
+						<option>English</option>
+						<option>France</option>
+					</select>
+					<p>Welcome to Rio de Janeiro</p>
+					<button class="right-icons translation"></button>
+				</main>
+				<footer></footer>
+			</section>
+
+			<section class="schedule">
+				<header class="contain">
+					<p class="left">Departure</p>
+					<div class="right">
+						<button class="right-icons departure"></button> <!--radio button-->
+						<button class="right-icons arrival"></button>
+					</div>
+				</header>
+				<main class="contain">
+					<p class="date">28.6</p>
+				</main>
+				<footer class="contain plain">
+					<time datetime="16:15">
+						16:15
+					</time>
+					<div>
+						<span class="plain-icon"></span>
+						<span>London</span>
+						<span class="line"></span>
+						<span>Tlv</span>
+					</div>
+					<span>Gate 19</span>
+					<span>Flight - <span>W6 2792</span></span>
+				</footer>	
+			</section>
+		</div>
+	</body>
+</html>
