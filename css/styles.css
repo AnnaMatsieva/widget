@@ -94,18 +94,21 @@ section header {
 
 .right {
   position: absolute;
-  top: 15px;/**/
-  right: 15px;/**/
+  top: 20px;/**/
+  right: 20px;/**/
   color: #fff;
 }
 
 .contain {
-  padding: 15px;
+  padding: 25px 20px;
+  display: block;
 }
 
 .right-icons { /**/
+  background: none;
   border: none;
-  background: url("../img/icons.png") no-repeat;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -117,28 +120,6 @@ section header {
   background-position: -3px -24px;
   height: 15px;
   width: 15px;
-}
-
-.departure {
-  background-position: -3px -300px;
-  height: 13px;
-  width: 15px;
-  /*
-  background: #fbc02d;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;*/
-}
-
-.arrival {
-  background-position: -3px -272px;
-  height: 15px;
-  width: 15px;
-  /*
-  background: #283593;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;*/
 }
 
 .clock {
@@ -160,11 +141,14 @@ section header {
 
 .weather main {
   position: relative;
+  height: 130px;
+  display: block;
 }
 
 .degree {
   font-size: 66px;
   color: #fff;
+  padding-left: 20px;
 }
 
 .forecast {
@@ -172,17 +156,19 @@ section header {
   width: 195px;
   height: 144px;
   position: absolute;
-  top: 42px;
-  right: -34px;
+  top: 5px;
+  right: -20px;
 }
 
 .forecast-mountains {
   background-position: 195px 0;
+  top: -10px;
+  right: -5px;
 }
 
 .time {
   background: #fff;
-  height: 100%;
+  height: 70px;
   z-index: 1;
   position: inherit;
 }
@@ -190,66 +176,185 @@ section header {
 .time li {
   display: inline-block;
   font-size: 14px;
-  padding: 30px 13px 25px 13px;
+  padding: 25px 0px 25px 23px;
 }
 
 
 /**/
-.time input {
-  width: 100%;
-}
-
-input[type='range'] {
-  box-sizing: border-box;
-  border: 0px solid transparent;
-  padding: 0px;
-  margin: 0px;
-  height: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.container:after {
+.weather input[type=range]{
+  -webkit-appearance: none;
+  width: 320px;
   position: absolute;
-  color: #777;
-  content: '09:00 12:00 15:00 18:00 21:00';
-  padding: 10px;
-  margin-left: 10px;
-  word-spacing: 20px;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-}
-.container {
-  padding: 0px;
-  position: relative;
+  bottom: 55px;
+  background: none;
+  margin: 0;
+  padding: 0;
 }
 
-output{
-  display: block;
-  margin-top: 50px;
-  color: #777;
-}
-output:before{
-  content:"Selected Value: ";
-  font-weight: bold;
+.weather input[type=range]::-webkit-slider-runnable-track {
+  border: none;
 }
 
-/**/
-
-
-
-
-
-
-
-
-
+.weather input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 18px;
+  background: url("../img/icons.png");
+  background-repeat: no-repeat;
+  background-position: -3px -95px;
+}
 
 /*audio / video*/
 
-.audio-video {
+.audio {
   background: #10174c;
+}
+
+.audio form {
+  background: #283593;
+  padding: 20px 20px 25px 20px;
+}
+
+#audio-container {
+  height: 125px;
+}
+
+.audio button {
+  margin: 0 11px;
+}
+
+.audio #prev {
+  background-position: 0 0;
+}
+
+.audio #play-pause {
+  background-position: -25px 0;
+}
+
+.audio #stop {
+  background-position: -50px 0;
+}
+
+.audio #next {
+  background-position: -75px 0;
+}
+
+.audio #mute {
+  background-position: -100px 0;
+}
+
+.audio #shuffle {
+  background-position: -125px 0;
+}
+
+.audio #volume-bar {
+  -webkit-appearance: none;
+  width: 0px;
+}
+
+.video #audio::-webkit-slider-runnable-track {
+  border: none;
+}
+
+.audio #volume-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.audio #seek-bar {
+  -webkit-appearance: none;
+  width: 320px;
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  background: none;
+}
+
+.audio #seek-bar::-webkit-slider-runnable-track {
+  border: none;
+}
+
+.audio #seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 30px;
+  background: url("../img/controls.png");
+  background-repeat: no-repeat;
+  background-position: -150px 0px;
+}
+
+/*video*/
+.video {
+  background: #fff;
+}
+
+.video form {
+  padding: 10px;
+}
+
+#video {
+  width: 320px;
+  height: 205px;
+}
+
+.controls {
+  background: url("../img/controls.png") no-repeat;
+  width: 20px;
+  height: 30px;
+  border: none;
+}
+
+.video #play-pause{
+  background-position: -195px 3px;
+  padding-left: 20px;
+}
+
+.video #mute {
+  background-position: -220px 0;
+  margin-left: 50px;
+}
+
+.video #volume-bar {
+  -webkit-appearance: none;
+  width: 40px;
+  background: #e91e63;
+  height: 2px;
+  position: relative;
+  top: -8px;
+}
+
+.video #volume-bar::-webkit-slider-runnable-track {
+  border: none;
+}
+
+.video #volume-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.video #full-screen {
+  background-position: -247px 0;
+  margin-left: 50px;
+}
+
+.video #seek-bar {
+  -webkit-appearance: none;
+  width: 320px;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  background: none;
+}
+
+.video #seek-bar::-webkit-slider-runnable-track {
+  border: none;
+}
+
+.video #seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 30px;
+  background: url("../img/controls.png");
+  background-repeat: no-repeat;
+  background-position: -150px 0px;
 }
 
 /*calendar*/
@@ -271,7 +376,7 @@ output:before{
 .calendar-table th,
 .calendar-table td {
   width: 45px;
-  height: 33px;
+  height: 30px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -279,18 +384,20 @@ output:before{
 .calendar main {
   background: #283593;
   height: 100%;
+  display: block;
 }
 
-.passed {
+.calendar .passed {
   color: #949ac9;
 }
 
 .today {
   border-radius: 50%;
   background: #e91e63;
-  /*width: 25px;
-  height: 25px;*/
-  padding: 3px;
+  height: 25px;
+  width: 25px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .scheduled {
@@ -305,7 +412,7 @@ output:before{
   border-radius: 50%;
   position: absolute;
   bottom: -10px;
-  left: 4px;
+  left: 40%;
 }
 
 /*Got to do*/
@@ -319,6 +426,7 @@ output:before{
   font-size: 14px;
   color: #212121;
   text-transform: none;
+  font-weight: bold;
 }
 
 .got-to-do header {
@@ -330,17 +438,52 @@ output:before{
   border-bottom: dotted 1px #c9b770;
 }
 
+.got-to-do li:first-child {
+  padding-top: 0;
+}
+
 .got-to-do li:last-child {
   border: none;
 }
 
-.got-to-do input[type="checkbox"] {
-  margin-right: 18px;
+.got-to-do label.custom-checkbox input {
+   display: none;
+}
+
+.got-to-do label.custom-checkbox input+div {/**/
+  background: none;
+  border: none;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: 0 -385px;
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.got-to-do label.custom-checkbox input:checked+div {/**/
+  background: none;
+  border: none;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: 0 -367px;
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 /*remind me*/
 .remind-me {
   background: #fff;
+}
+
+.remind-me .left {
+  text-transform: none;
+
 }
 
 .remind-me header {
@@ -350,6 +493,10 @@ output:before{
 .remind-me li {
   padding: 20px 0;
   border-bottom: dotted 1px #c9b770;
+}
+
+.remind-me li:first-child {
+  padding-top: 0;
 }
 
 .remind-me li:last-child {
@@ -364,13 +511,61 @@ output:before{
   background: #e91e63;
 }
 
-/*holidays*/
-.holidays {
+.remind-me label.custom-checkbox input {
+   display: none;
+}
+
+.remind-me label.custom-checkbox input+div {/**/
+  background: none;
+  border: none;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: 0 -72px;
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.remind-me label.custom-checkbox input:checked+div {/**/
+  background: none;
+  border: none;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: 0 -47px;
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/*celebration*/
+.celebration {
   background: #fff;
 }
 
-.holidays header {
+.celebration header {
   background: #283593;
+}
+
+.celebrate {
+  text-align: center;
+  display: table;
+  height: 200px;
+  margin: auto;
+}
+
+.celebrate figure {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.celebrate-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 /*sales volume*/
@@ -378,8 +573,43 @@ output:before{
   background: #10174c;
 }
 
+.sales-volume figure {
+  position: absolute;
+  bottom: 0;
+}
+
+.sales-volume ul {
+  padding: 10px 20px;
+}
+
 .sales-volume li {
   display: inline-block;
+  text-transform: uppercase;
+  margin-right: 100px;
+}
+
+.sales-volume li:last-child {
+  margin-right: 0;
+}
+
+.graph-a {
+  margin: 15px 0;
+}
+
+.graph-a::before,
+.graph-b::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #e91e63;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  left: -5px;
+}
+
+.graph-b::before {
+  background: #fbc02d;
 }
 
 /*Activity*/
@@ -387,8 +617,31 @@ output:before{
   background: #10174c;
 }
 
-.activity input {
-  right: 1000px;
+.activity label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.activity label.custom-radio input{
+   display: none;
+}
+
+.activity label.custom-radio input + div {
+  height: 25px;
+  width: 30px;
+  opacity: 0.5;
+}
+
+.activity label.custom-radio input:checked + div {  
+  opacity: 1;
+}
+
+.bicicle {
+  background-position: 0px -174px;
+}
+
+.men {
+  background-position: 5px -198px;
 }
 
 .circle-graph {
@@ -402,18 +655,6 @@ output:before{
   top: 60px;
   left: 120px;
   color: #fff;
-}
-
-.bicicle {
-  background-position: -3px -225px;
-  height: 18px;
-  width: 18px;
-}
-
-.men {
-  background-position: -3px -225px;
-  height: 18px;
-  width: 18px;
 }
 
 /*Rating*/
@@ -464,13 +705,14 @@ output:before{
   font-size: 32px;
   width: 320px;
   text-align: right;
-  padding: 20px 0px;
+  padding: 13px 0px;
   position: relative;
   right: 40px;
 }
 
 .calculator button {
-  padding: 7px 19px;
+  width: 60px;
+  height: 36px;
   border: none;
   background: none;
   text-transform: uppercase;
@@ -478,9 +720,22 @@ output:before{
   color: #fff;
 }
 
-.calculator-table th,
-.calculator-table td {
-  
+.center-colspan {
+  text-align: center;
+  background: #1c266f;
+}
+
+.calculator .equally {
+  position: absolute;
+  right: 15px;
+  bottom: 25px;
+  border-radius: 50%;
+  background: #e91e63;
+  border: none;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  padding: 0;
 }
 
 /*Country*/
@@ -502,7 +757,7 @@ output:before{
 
 .country main {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
 }
 
 .country-time {
@@ -521,11 +776,23 @@ output:before{
 /*Starts in*/
 .starts-in {
   background: #10174c;
+  /* IE10+ */ 
+  background-image: -ms-linear-gradient(left, #283593 50%, #10174C 50%);
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(left, #283593 50%, #10174C 50%);
+  /* Opera */ 
+  background-image: -o-linear-gradient(left, #283593 50%, #10174C 50%);
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50, #283593), color-stop(50, #10174C));
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(left, #283593 50%, #10174C 50%);
+  /* W3C Markup */ 
+  background-image: linear-gradient(to right, #283593 50%, #10174C 50%);
 }
 
+
+
 .first-half {
-  background: #283593;
-  height: 100%;
   width: 160px;
   text-align: center;
   float: left;
@@ -611,11 +878,21 @@ output:before{
   font-size: 14px;
 }
 
-.date {
-  font-size: 48px;
+.schedule .contain {
+  padding-bottom: 5px;
 }
 
-time {
+.date {
+  font-size: 48px;
+  padding: 0 20px;
+}
+
+.schedule main {
+  height: 100px;
+  display: block;
+}
+
+.schedule time {
   font-size: 21px;
 }
 
@@ -625,12 +902,16 @@ time {
 
 .plain-icon {
   position: absolute;
-  top: 0;
-  left: 150px;
+  top: 15px;
+  left: 160px;
   background: url(../img/icons.png) no-repeat;
   background-position: 0 -327px;
   width: 45px;
   height: 27px;
+}
+
+.country-fly {
+  padding: 10px 0;
 }
 
 .line {
@@ -640,4 +921,40 @@ time {
   display: inline-block;
   position: relative;
   top: -4px;
+}
+
+.departure {
+  background-position: 1px -294px;
+  height: 13px;
+  width: 15px;
+}
+
+.arrival {
+  background-position: 1px -269px;
+  height: 15px;
+  width: 15px;
+}
+
+.schedule label {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.schedule label.custom-radio input{
+   display: none;
+}
+
+.schedule label.custom-radio input + div {
+  background-color: #283593;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+
+.schedule label.custom-radio input:checked + div {  
+  background-color: #fbc02d;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
 }
