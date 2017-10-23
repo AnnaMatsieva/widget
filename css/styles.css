@@ -206,61 +206,61 @@ section header {
 
 /*audio / video*/
 
-.audio {
+.audio-section {
   background: #10174c;
 }
 
-.audio form {
+.audio-section form {
   background: #283593;
   padding: 20px 20px 25px 20px;
 }
 
-#audio-container {
+.audio-container {
   height: 125px;
 }
 
-.audio button {
+.audio-section button {
   margin: 0 11px;
 }
 
-.audio #prev {
+.audio-section .prev {
   background-position: 0 0;
 }
 
-.audio #play-pause {
+.audio-section .play-pause {
   background-position: -25px 0;
 }
 
-.audio #stop {
+.audio-section .stop {
   background-position: -50px 0;
 }
 
-.audio #next {
+.audio-section .next {
   background-position: -75px 0;
 }
 
-.audio #mute {
+.audio-section .mute {
   background-position: -100px 0;
 }
 
-.audio #shuffle {
+.audio-section .shuffle {
   background-position: -125px 0;
 }
 
-.audio #volume-bar {
+.audio-section .volume-bar {
   -webkit-appearance: none;
   width: 0px;
 }
 
-.video #audio::-webkit-slider-runnable-track {
+.audio .audio::-webkit-slider-runnable-track {
   border: none;
 }
 
-.audio #volume-bar::-webkit-slider-thumb {
+.audio-section .volume-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-.audio #seek-bar {
+.audio-section .seek-bar {
   -webkit-appearance: none;
   width: 320px;
   position: absolute;
@@ -269,11 +269,11 @@ section header {
   background: none;
 }
 
-.audio #seek-bar::-webkit-slider-runnable-track {
+.audio-section .seek-bar::-webkit-slider-runnable-track {
   border: none;
 }
 
-.audio #seek-bar::-webkit-slider-thumb {
+.audio-section .seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 35px;
   width: 30px;
@@ -283,15 +283,15 @@ section header {
 }
 
 /*video*/
-.video {
+.video-section {
   background: #fff;
 }
 
-.video form {
+.video-section form {
   padding: 10px;
 }
 
-#video {
+.video {
   width: 320px;
   height: 205px;
 }
@@ -303,17 +303,17 @@ section header {
   border: none;
 }
 
-.video #play-pause{
+.video-section .play-pause{
   background-position: -195px 3px;
   padding-left: 20px;
 }
 
-.video #mute {
+.video-section .mute {
   background-position: -220px 0;
   margin-left: 50px;
 }
 
-.video #volume-bar {
+.video-section .volume-bar {
   -webkit-appearance: none;
   width: 40px;
   background: #e91e63;
@@ -322,20 +322,20 @@ section header {
   top: -8px;
 }
 
-.video #volume-bar::-webkit-slider-runnable-track {
+.video-section .volume-bar::-webkit-slider-runnable-track {
   border: none;
 }
 
-.video #volume-bar::-webkit-slider-thumb {
+.video-section .volume-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-.video #full-screen {
+.video-section .full-screen {
   background-position: -247px 0;
   margin-left: 50px;
 }
 
-.video #seek-bar {
+.video-section .seek-bar {
   -webkit-appearance: none;
   width: 320px;
   position: absolute;
@@ -344,11 +344,11 @@ section header {
   background: none;
 }
 
-.video #seek-bar::-webkit-slider-runnable-track {
+.video-section .seek-bar::-webkit-slider-runnable-track {
   border: none;
 }
 
-.video #seek-bar::-webkit-slider-thumb {
+.video-section .seek-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 35px;
   width: 30px;
@@ -450,7 +450,7 @@ section header {
    display: none;
 }
 
-.got-to-do label.custom-checkbox input+div {/**/
+.got-to-do label.custom-checkbox input + button {/**/
   background: none;
   border: none;
   background-image: url("../img/icons.png");
@@ -463,7 +463,7 @@ section header {
   vertical-align: bottom;
 }
 
-.got-to-do label.custom-checkbox input:checked+div {/**/
+.got-to-do label.custom-checkbox input:checked + button {/**/
   background: none;
   border: none;
   background-image: url("../img/icons.png");
@@ -515,7 +515,7 @@ section header {
    display: none;
 }
 
-.remind-me label.custom-checkbox input+div {/**/
+.remind-me label.custom-checkbox input + button {/**/
   background: none;
   border: none;
   background-image: url("../img/icons.png");
@@ -528,7 +528,7 @@ section header {
   vertical-align: bottom;
 }
 
-.remind-me label.custom-checkbox input:checked+div {/**/
+.remind-me label.custom-checkbox input:checked + button {/**/
   background: none;
   border: none;
   background-image: url("../img/icons.png");
@@ -626,13 +626,13 @@ section header {
    display: none;
 }
 
-.activity label.custom-radio input + div {
+.activity label.custom-radio input + button {
   height: 25px;
   width: 30px;
   opacity: 0.5;
 }
 
-.activity label.custom-radio input:checked + div {  
+.activity label.custom-radio input:checked + button {  
   opacity: 1;
 }
 
@@ -790,8 +790,6 @@ section header {
   background-image: linear-gradient(to right, #283593 50%, #10174C 50%);
 }
 
-
-
 .first-half {
   width: 160px;
   text-align: center;
@@ -945,14 +943,14 @@ section header {
    display: none;
 }
 
-.schedule label.custom-radio input + div {
+.schedule label.custom-radio input + button {
   background-color: #283593;
   border-radius: 50%;
   height: 25px;
   width: 25px;
 }
 
-.schedule label.custom-radio input:checked + div {  
+.schedule label.custom-radio input:checked + button {  
   background-color: #fbc02d;
   border-radius: 50%;
   height: 25px;

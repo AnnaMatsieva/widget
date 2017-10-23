@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 	<head>
 		<title>Widget</title>
 		<meta charset="utf-8" />
@@ -11,15 +12,15 @@
 				<header class="contain">
 					<p class="left">Madrid</p>
 					<div class="right">
-						<button class="right-icons info"></button>
+						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
 				</header>
-				<main class="">
+				<main>
 					<p class="degree">24&deg;</p>
 					<div class="forecast"></div>
 				</main>
 				<footer class="time">
-					<input type="range" min="1" max="24" value="1" step="1">
+					<input type="range" min="1" max="24" value="1" step="1" aria-label="Drag the time slider">
 					<ul>
 						<li><time datetime="9:00">9:00</time></li>
 						<li><time datetime="12:00">12:00</time></li>
@@ -34,15 +35,15 @@
 				<header class="contain">
 					<p class="left">Himalays</p>
 					<div class="right">
-						<button class="right-icons info"></button>
+						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
 				</header>
-				<main class="">
+				<main>
 					<p class="degree">-18&deg;</p>
 					<div class="forecast forecast-mountains"></div>
 				</main>
 				<footer class="time">
-					<input type="range" min="1" max="24" value="1" step="1">
+					<input type="range" min="1" max="24" value="1" step="1" aria-label="Drag the time slider">
 					<ul>
 						<li><time datetime="18:00">18:00</time></li>
 						<li><time datetime="21:00">21:00</time></li>
@@ -53,7 +54,7 @@
 				</footer>
 			</section>
 
-			<section class="audio-video audio">		
+			<section class="audio-section">		
 				<header class="contain">
 					<p class="left">Nirvana</p>
 					<div class="right">
@@ -63,34 +64,34 @@
 					</div>
 				</header>
 				<main>
-					<div id="audio-container">
-						<audio id="audio">
+					<div class="audio-container">
+						<audio class="audio">
 						    <source src="audio/music.ogg" type="audio/ogg; codecs=vorbis">
 						    <source src="audio/music.mp3" type="audio/mpeg">
 						    Your browser doesn't support audio.
 						    <a href="audio/music.mp3">Download</a> the video instead.
 					  	</audio>
 					</div>
-					<div id="audio-controls">
+					<div class="audio-controls">
 						<form>
-							<input type="range" id="seek-bar" value="0">
-							<button type="button" id="prev" class="controls"></button>
-						    <button type="button" id="play-pause" class="controls"></button>
-						    <button type="button" id="stop" class="controls"></button>
-						    <button type="button" id="next" class="controls"></button>
-						    <button type="button" id="mute" class="controls"></button>
-						    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
-						    <button type="button" id="shuffle" class="controls"></button>
+							<input type="range" class="seek-bar" value="0" aria-label="Drag the time slider">
+							<button type="button" class="prev controls" aria-label="Previous record"></button>
+						    <button type="button" class="play-pause controls" aria-label="Play and pause record"></button>
+						    <button type="button" class="stop controls" aria-label="Stop recording"></button>
+						    <button type="button" class="next controls" aria-label="Next record"></button>
+						    <button type="button" class="mute controls" aria-label="Turn off or turn on mute"></button>
+						    <input type="range" class="volume-bar" min="0" max="1" step="0.1" value="1" aria-label="Change volume">
+						    <button type="button" class="shuffle controls" aria-label="Mix records"></button>
 						</form>
 					 </div>
 				</main>
 			</section>
 				
-			<section class="audio-video video">		
+			<section class="video-section">		
 				<header></header>
 				<main>
-					<div id="video-container">
-						<video id="video">
+					<div class="video-container">
+						<video class="video">
 						    <source src="videos/mikethefrog.webm" type="video/webm">
 						    <source src="videos/mikethefrog.ogv" type="video/ogv">
 						    <source src="img/mikethefrog.mp4" type="video/mp4">
@@ -99,16 +100,16 @@
 						      <a href="videos/mikethefrog.mp4">Download</a> the video instead.
 						    </p>
 						</video>
-						<div id="video-controls">
+						<div class="video-controls">
 							<form>
-							    <button type="button" id="play-pause" class="controls"></button>
+							    <button type="button" class="play-pause controls" aria-label="Play and pause record"></button>
 							    <time class="passed">03:29</time>
 							    <span>/</span>
 							    <time class="all-time">04:25</time>
-							    <input type="range" id="seek-bar" value="0">
-							    <button type="button" id="mute" class="controls"></button>
-							    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
-							    <button type="button" id="full-screen" class="controls"></button>
+							    <input type="range" class="seek-bar" value="0" aria-label="Drag the time slider">
+							    <button type="button" class="mute controls" aria-label="Turn off or turn on mute"></button>
+							    <input type="range" class="volume-bar" min="0" max="1" step="0.1" value="1" aria-label="Change volume">
+							    <button type="button" class="full-screen controls" aria-label="Show in full screen"></button>
 							</form>
 					  	</div>
 					</div>
@@ -123,20 +124,20 @@
 						<option>August 2015</option>
 					</select>
 					<div class="right">
-						<button class="right-icons plus"></button>
+						<button class="right-icons plus"  aria-label="Menu with information"></button>
 					</div>
 				</header>
 				<main>
 					<table class="calendar-table">
 						<thead>
 							<tr>
-								<th><a href="">Mon</a></th>
-								<th><a href="">Tue</a></th>
-								<th><a href="">Wed</a></th>
-								<th><a href="">Thu</a></th>
-								<th><a href="">Fri</a></th>
-								<th><a href="">Sat</a></th>
-								<th><a href="">Sun</a></th>
+								<th scope="col"><a href="">Mon</a></th>
+								<th scope="col"><a href="">Tue</a></th>
+								<th scope="col"><a href="">Wed</a></th>
+								<th scope="col"><a href="">Thu</a></th>
+								<th scope="col"><a href="">Fri</a></th>
+								<th scope="col"><a href="">Sat</a></th>
+								<th scope="col"><a href="">Sun</a></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -156,11 +157,11 @@
 								<td><a href=""><span class="passed">7</span></a></td>
 								<td><a href=""><span class="passed">8</span></a></td>
 								<td><a href=""><span class="passed">9</span></a></td>
-								<td><a href=""><span class="today scheduled">10</span></a></td>
+								<td><a href="" aria-label="Today's date"><span class="today scheduled">10</span></a></td>
 							</tr>
 							<tr>
 								<td><a href=""><span>11</span></a></td>
-								<td><a href=""><span class="scheduled">12</span></a></td>
+								<td><a href=""><span class="scheduled" aria-label="Frank's Birthday">12</span></a></td>
 								<td><a href=""><span>13</span></a></td>
 								<td><a href=""><span>14</span></a></td>
 								<td><a href=""><span>15</span></a></td>
@@ -188,79 +189,76 @@
 						</tbody>
 					</table>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="got-to-do">
 				<header class="contain">
 					<p class="left">Got to do...</p>
 					<div class="right">
-						<button class="right-icons info"></button>
+						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
 				</header>
 				<main  class="contain">
 					<ul>
 						<li>
 							<label class="custom-checkbox" for="got-do">
-								<input id="got-do" name="got-do" value="1" type="checkbox" checked />
-								<div></div>
+								<input id="got-do" name="got-do" value="1" type="checkbox" checked aria-checked="true" />
+								<button aria-label="Restaurant reservation"></button>
 								Restaurant reservations
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="got-do1">
 								<input id="got-do1" name="got-do" value="1" type="checkbox" />
-								<div></div>
+								<button aria-label="Fix the broken door"></button>
 								Fix the broken door
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="got-do2">
 								<input id="got-do2" name="got-do" value="1" type="checkbox" />
-								<div></div>
+								<button aria-label="Buy new batteries"></button>
 								Buy new batteries
 							</label>
 						</li>
 					</ul>
-					<button class="add"></button>
+					<button class="add" aria-label="Add new note"></button>
 				</main>
-				<footer></footer>	
 			</section>
 
 			<section class="remind-me">
 				<header class="contain">
 					<p class="left">Remind me to...</p>
 					<div class="right">
-						<button class="right-icons info"></button>
+						<button class="right-icons info"  aria-label="Menu with information"></button>
 					</div>
 				</header>
 				<main  class="contain">
 					<ul>
 						<li>
 							<label class="custom-checkbox" for="remind">
-								<input id="remind" name="remind" value="1" type="checkbox" checked />
-								<div></div>
+								<input id="remind" name="remind" value="1" type="checkbox" checked aria-checked="true" />
+								<button aria-label="Pick ap the Tickets at 16:00"></button>
 								Pick ap the Tickets at 16:00
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="remind2">
 								<input id="remind2" name="remind" value="2" type="checkbox" />
-								<div></div>
+								<button aria-label="Meeting with David at 17:00"></button>
 								Meeting with David at 17:00
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="remind3">
 								<input id="remind3" name="remind" value="3" type="checkbox" />
-								<div></div>
+								<button aria-label="Send Email to Sarah"></button>
 								Send Email to Sarah
 							</label>
 						</li>
 					</ul>
-					<button class="add"></button>
+					<button class="add" aria-label="Add new note"></button>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="celebration">
@@ -272,13 +270,12 @@
 				</header>
 				<main class="celebrate">
 					<figure>
-						<img src="img/cake.png" alt="cake">
+						<img src="img/cake.png" alt="Birthday cake">
 						<figcaption>
 							<p class="celebrate-name">James Birthday</p>
 						</figcaption>
 					</figure>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="sales-volume">
@@ -291,7 +288,7 @@
 				</header>
 				<main>
 					<figure>
-						<img src="img/figure-graph.png" alt="graph" />
+						<img src="img/figure-graph.png" alt="Graphics show that the first..." />
 						<figcaption>
 							<ul>
 								<li><a href="">Jun</a></li>
@@ -309,23 +306,22 @@
 					<div class="right">
 						<form>
 							<label class="custom-radio" for="bicicle">
-								<input id="bicicle" name="type" value="1" type="radio" checked />
-								<div class="right-icons bicicle"></div>
+								<input id="bicicle" name="type" value="1" type="radio" checked aria-checked="true" />
+								<button class="right-icons bicicle" aria-label="Use bicicle activity"></button>
 							</label>
 							<label class="custom-radio" for="men">
 								<input id="men" name="type" value="2" type="radio" />
-								<div class="right-icons men"></div>
+								<button class="right-icons men" aria-label="Use sample activity"></button>
 							</label>
 						</form>
 					</div>
 				</header>
 				<main  class="contain">
 					<div class="circle-graph">
-						<img src="img/circle-graph.png" alt="graph">
-						<p class="percent">75%</p>
+						<img src="img/circle-graph.png" alt="Circle graph show that...">
+						<p class="percent" aria-label="75%">75%</p>
 					</div>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="rating">
@@ -396,7 +392,6 @@
 						</li>
 					</ul>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="calculator">
@@ -439,11 +434,10 @@
 							<td class="center-colspan" colspan="2"><button>0</button></td>
 							<td><button>.</button></td>
 							<td><button>+</button></td>
-							<td><button class="equally">=</button></td>
+							<td><button class="equally" aria-label="Result">=</button></td>
 						</tr>
 					</table>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="country">
@@ -453,7 +447,7 @@
 						<option>Paris</option>
 					</select>
 					<div class="right">
-						<button class="right-icons clock"></button>
+						<button class="right-icons clock" aria-label="Clock icon"></button>
 					</div>
 				</header>
 				<main class="contain">
@@ -462,7 +456,6 @@
 						<p class="country-day">Saturday, June 27 - <span>EDT</span></p>
 					</time>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="starts-in clearfix">
@@ -481,7 +474,7 @@
 				</div>
 			</section>
 
-			<section class="translate"><!---->
+			<section class="translate">
 				<header>
 					<input type="text" value="Bem-vindo ao Rio de Janeiro" />
 				</header>
@@ -491,9 +484,8 @@
 						<option>France</option>
 					</select>
 					<p>Welcome to Rio de Janeiro</p>
-					<button class="right-icons translation"></button>
+					<button class="right-icons translation" aria-label="Translate text into English language"></button>
 				</main>
-				<footer></footer>
 			</section>
 
 			<section class="schedule">
@@ -501,12 +493,12 @@
 					<p class="left">Departure</p>
 					<div class="right">
 						<label class="custom-radio" for="departure">
-							<input id="departure" name="type" value="1" type="radio" checked />
-							<div class="right-icons departure"></div>
+							<input id="departure" name="type" value="1" type="radio" checked aria-checked="true" />
+							<button class="right-icons departure" aria-label="Departure checked"></button>
 						</label>
 						<label class="custom-radio" for="arrival">
 							<input id="arrival" name="type" value="2" type="radio" />
-							<div class="right-icons arrival"></div>
+							<button class="right-icons arrival" aria-label="Arrival checked"></button>
 						</label>
 					</div>
 				</header>
