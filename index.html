@@ -5,12 +5,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />	
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,700,900" rel="stylesheet">
 	</head>
 	<body>
 		<div class="wrapper">
-			<section class="weather">
+
+			<section class="weather" aria-label="Widget about weather" role="main">
 				<header class="contain">
-					<p class="left">Madrid</p>
+					<p class="left header-title">Madrid</p>
 					<div class="right">
 						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
@@ -31,9 +33,9 @@
 				</footer>
 			</section>
 
-			<section class="weather">		
+			<section class="weather" aria-label="Widget about weather" role="main">		
 				<header class="contain">
-					<p class="left">Himalays</p>
+					<p class="left header-title">Himalays</p>
 					<div class="right">
 						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
@@ -54,10 +56,10 @@
 				</footer>
 			</section>
 
-			<section class="audio-section">		
+			<section class="audio-section" aria-label="Widget for music" role="main">		
 				<header class="contain">
-					<p class="left">Nirvana</p>
-					<div class="right">
+					<p class="left header-title">Nirvana</p>
+					<div class="right time-title">
 						<time class="passed">01:24</time>
 							<span>/</span>
 						<time class="all-time">3:55</time>
@@ -66,10 +68,10 @@
 				<main>
 					<div class="audio-container">
 						<audio class="audio">
-						    <source src="audio/music.ogg" type="audio/ogg; codecs=vorbis">
-						    <source src="audio/music.mp3" type="audio/mpeg">
+						    <source src="audio/" type="audio/ogg; codecs=vorbis">
+						    <source src="audio/" type="audio/mpeg">
 						    Your browser doesn't support audio.
-						    <a href="audio/music.mp3">Download</a> the video instead.
+						    <a href="audio/">Download</a> the video instead.
 					  	</audio>
 					</div>
 					<div class="audio-controls">
@@ -87,14 +89,13 @@
 				</main>
 			</section>
 				
-			<section class="video-section">		
-				<header></header>
+			<section class="video-section" aria-label="Widget for video" role="main">		
 				<main>
 					<div class="video-container">
 						<video class="video">
-						    <source src="videos/mikethefrog.webm" type="video/webm">
-						    <source src="videos/mikethefrog.ogv" type="video/ogv">
-						    <source src="img/mikethefrog.mp4" type="video/mp4">
+						    <source src="videos/" type="video/webm">
+						    <source src="videos/" type="video/ogv">
+						    <source src="videos/" type="video/mp4">
 						    <p>
 						      Your browser doesn't support video.
 						      <a href="videos/mikethefrog.mp4">Download</a> the video instead.
@@ -103,9 +104,11 @@
 						<div class="video-controls">
 							<form>
 							    <button type="button" class="play-pause controls" aria-label="Play and pause record"></button>
-							    <time class="passed">03:29</time>
-							    <span>/</span>
-							    <time class="all-time">04:25</time>
+							    <span class="time-title">
+							    	<time class="passed">03:29</time>
+								    <span>/</span>
+								    <time class="all-time">04:25</time>
+								</span>
 							    <input type="range" class="seek-bar" value="0" aria-label="Drag the time slider">
 							    <button type="button" class="mute controls" aria-label="Turn off or turn on mute"></button>
 							    <input type="range" class="volume-bar" min="0" max="1" step="0.1" value="1" aria-label="Change volume">
@@ -116,9 +119,9 @@
 				</main>
 			</section>
 
-			<section class="calendar">		
+			<section class="calendar" aria-label="Calendar widget" role="main">		
 				<header class="contain">
-					<select class="left">
+					<select class="left header-title">
 						<option>June 2015</option>
 						<option>July 2015</option>
 						<option>August 2015</option>
@@ -191,9 +194,9 @@
 				</main>
 			</section>
 
-			<section class="got-to-do">
+			<section class="got-to-do" aria-label="Widget got to do" role="main">
 				<header class="contain">
-					<p class="left">Got to do...</p>
+					<p class="left header-title">Got to do...</p>
 					<div class="right">
 						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
@@ -226,9 +229,9 @@
 				</main>
 			</section>
 
-			<section class="remind-me">
+			<section class="remind-me" aria-label="Widget remind me" role="main">
 				<header class="contain">
-					<p class="left">Remind me to...</p>
+					<p class="left header-title">Remind me to...</p>
 					<div class="right">
 						<button class="right-icons info"  aria-label="Menu with information"></button>
 					</div>
@@ -261,9 +264,9 @@
 				</main>
 			</section>
 
-			<section class="celebration">
+			<section class="celebration" aria-label="Widget reminds of holidays" role="main">
 				<header class="contain">
-					<p class="left">Friday</p>
+					<p class="left header-title">Friday</p>
 					<div class="right">
 						<p>12.06.15</p>
 					</div>
@@ -278,9 +281,9 @@
 				</main>
 			</section>
 
-			<section class="sales-volume">
+			<section class="sales-volume" aria-label="Widget with graph dependency" role="main">
 				<header class="contain">
-					<p class="left">Sales volume</p>
+					<p class="left header-title">Sales volume</p>
 					<div class="right">
 						<p class="graph-a">Store A</p>
 						<p class="graph-b">Store B</p>
@@ -300,9 +303,9 @@
 				</main>
 			</section>
 
-			<section class="activity">
+			<section class="activity" aria-label="Sports widget" role="main">
 				<header class="contain">
-					<p class="left">Activity</p>
+					<p class="left header-title">Activity</p>
 					<div class="right">
 						<form>
 							<label class="custom-radio" for="bicicle">
@@ -324,14 +327,14 @@
 				</main>
 			</section>
 
-			<section class="rating">
+			<section class="rating" aria-label="Rating widget" role="main">
 				<header class="contain">
-					<p class="left">Rating</p>
+					<p class="left header-title">Rating</p>
 				</header>
 				<main  class="contain">
 					<ul>
 						<li>
-							<div class="outer"> <!---->
+							<div class="outer">
 								<div class="inner"></div>
 							</div>
 							<div class="rate">1</div>
@@ -394,7 +397,7 @@
 				</main>
 			</section>
 
-			<section class="calculator">
+			<section class="calculator" aria-label="Widget calculator" role="main">
 				<header>
 					<form>
 						<input type="text" value="325.075">
@@ -431,7 +434,7 @@
 							<td><button></button></td>
 						</tr>
 						<tr>
-							<td class="center-colspan" colspan="2"><button>0</button></td>
+							<td class="zero-calculate" colspan="2"><button>0</button></td>
 							<td><button>.</button></td>
 							<td><button>+</button></td>
 							<td><button class="equally" aria-label="Result">=</button></td>
@@ -440,9 +443,9 @@
 				</main>
 			</section>
 
-			<section class="country">
+			<section class="country" aria-label="Widget shows the tome" role="main">
 				<header class="contain">
-					<select class="left">
+					<select class="left header-title">
 						<option>New York</option>
 						<option>Paris</option>
 					</select>
@@ -458,10 +461,10 @@
 				</main>
 			</section>
 
-			<section class="starts-in clearfix">
+			<section class="starts-in clearfix" aria-label="Timer widget" role="main">
 				<div class="contain">
 					<header>
-						<p class="left">Starts in</p>
+						<p class="left header-title">Starts in</p>
 					</header>
 				</div>
 				<div class="first-half">
@@ -474,7 +477,7 @@
 				</div>
 			</section>
 
-			<section class="translate">
+			<section class="translate" aria-label="Translation widget" role="main">
 				<header>
 					<input type="text" value="Bem-vindo ao Rio de Janeiro" />
 				</header>
@@ -488,9 +491,9 @@
 				</main>
 			</section>
 
-			<section class="schedule">
+			<section class="schedule" aria-label="Airplane schedule widget" role="main">
 				<header class="contain">
-					<p class="left">Departure</p>
+					<p class="left header-title">Departure</p>
 					<div class="right">
 						<label class="custom-radio" for="departure">
 							<input id="departure" name="type" value="1" type="radio" checked aria-checked="true" />
@@ -514,9 +517,11 @@
 						<span>London</span>
 						<span class="line"></span>
 						<span>Tlv</span>
+						<div class="departure-info">
+							<span>Gate 19</span>
+							<span>Flight - <span>W6 2792</span></span>
+						</div>
 					</div>
-					<span>Gate 19</span>
-					<span>Flight - <span>W6 2792</span></span>
 				</footer>	
 			</section>
 		</div>
