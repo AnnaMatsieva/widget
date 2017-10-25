@@ -25,7 +25,7 @@
 				<footer class="time">
 					<input type="range" min="1" max="24" value="1" step="1" aria-label="Drag the time slider">
 					<ul>
-						<li><time datetime="9:00">9:00</time></li>
+						<li><time datetime="09:00">9:00</time></li>
 						<li><time datetime="12:00">12:00</time></li>
 						<li><time datetime="15:00">15:00</time></li>
 						<li><time datetime="18:00">18:00</time></li>
@@ -51,7 +51,7 @@
 					<ul>
 						<li><time datetime="18:00">18:00</time></li>
 						<li><time datetime="21:00">21:00</time></li>
-						<li><time datetime="24:00">24:00</time></li>
+						<li><time datetime="00:00">24:00</time></li>
 						<li><time datetime="03:00">03:00</time></li>
 						<li><time datetime="06:00">06:00</time></li>
 					</ul>
@@ -65,7 +65,6 @@
 					<p class="song-name">Lithium</p>
 					<div class="right time-title" role="timer">
 						<time class="passed">01:24</time>
-							<span>/</span>
 						<time class="all-time">3:55</time>
 					</div>
 				</header>
@@ -109,7 +108,6 @@
 							    <button type="button" class="play-pause controls" aria-label="Play and pause record. playback will start from 10 seconds"></button>
 							    <span class="time-title" role="timer">
 							    	<time class="passed">03:29</time>
-								    <span>/</span>
 								    <time class="all-time">04:25</time>
 								</span>
 							    <input type="range" class="seek-bar" value="0" aria-label="Drag the time slider">
@@ -211,21 +209,21 @@
 						<li>
 							<label class="custom-checkbox" for="got-do">
 								<input id="got-do" name="got-do" value="1" type="checkbox" checked aria-checked="true" />
-								<button aria-label="Restaurant reservation checked"></button>
+								<button id="got-do" aria-label="Restaurant reservation checked"></button>
 								Restaurant reservations
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="got-do1">
 								<input id="got-do1" name="got-do" value="1" type="checkbox" />
-								<button aria-label="Fix the broken door unchecked"></button>
+								<button id="got-do1" aria-label="Fix the broken door unchecked"></button>
 								Fix the broken door
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="got-do2">
 								<input id="got-do2" name="got-do" value="1" type="checkbox" />
-								<button aria-label="Buy new batteries unchecked"></button>
+								<button id="got-do2" aria-label="Buy new batteries unchecked"></button>
 								Buy new batteries
 							</label>
 						</li>
@@ -247,21 +245,21 @@
 						<li>
 							<label class="custom-checkbox" for="remind">
 								<input id="remind" name="remind" value="1" type="checkbox" checked aria-checked="true" />
-								<button aria-label="Pick ap the Tickets at 16:00 checked"></button>
+								<button id="remind" aria-label="Pick ap the Tickets at 16:00 checked"></button>
 								Pick ap the Tickets at 16:00
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="remind2">
 								<input id="remind2" name="remind" value="2" type="checkbox" />
-								<button aria-label="Meeting with David at 17:00 unchecked"></button>
+								<button id="remind2" aria-label="Meeting with David at 17:00 unchecked"></button>
 								Meeting with David at 17:00
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="remind3">
 								<input id="remind3" name="remind" value="3" type="checkbox" />
-								<button aria-label="Send Email to Sarah unchecked"></button>
+								<button id="remind3" aria-label="Send Email to Sarah unchecked"></button>
 								Send Email to Sarah
 							</label>
 						</li>
@@ -466,7 +464,7 @@
 					</div>
 				</header>
 				<main class="contain">
-					<time datetime="11:55 Saturday, June 27">
+					<time datetime="2017-06-27T11:58">
 						<p class="country-time">11:55</p>
 						<p class="country-day">Saturday, June 27 - <span>EDT</span></p>
 					</time>
