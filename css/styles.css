@@ -1,9 +1,12 @@
+* {
+  outline-color: red !important;
+}
+
 html,
 body {
   height: 100%;
   margin: 0 auto;
   border: 0;
-  outline: 0;
   padding: 0;
   font-size: 1em;
   color: #000;
@@ -37,6 +40,16 @@ figure {
 
 button {
   cursor: pointer;
+}
+
+.wcag-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .header-title {
@@ -210,13 +223,30 @@ section header {
   background: #10174c;
 }
 
+.audio-section main {
+  height: 160px;
+}
+
+.audio-section .song-name {
+  font-weight: 100;
+  color: #e91e63;
+  text-transform: none;
+  font-size: 1.875em;
+}
+
 .audio-section form {
   background: #283593;
-  padding: 20px 20px 25px 20px;
+  padding: 15px 20px 25px 20px;
 }
 
 .audio-container {
-  height: 125px;
+  height: 90px;
+  position: relative;
+}
+
+.audio-container img {
+  position: absolute;
+  bottom: 0;
 }
 
 .audio-section button {
@@ -264,9 +294,10 @@ section header {
   -webkit-appearance: none;
   width: 320px;
   position: absolute;
-  bottom: 55px;
+  bottom: 65px;
   left: 0;
-  background: none;
+  height: 5px;
+  margin: 0;
 }
 
 .audio-section .seek-bar::-webkit-slider-runnable-track {
@@ -280,6 +311,13 @@ section header {
   background: url("../img/controls.png");
   background-repeat: no-repeat;
   background-position: -150px 0px;
+}
+
+.audio-section input[type = range]::-moz-range-progress,
+.audio-section input[type = range]::-webkit-slider-thumb:before,
+.audio-section input[type = range]::-webkit-color-swatch {
+  background: #e91e63;
+  height: 5px;
 }
 
 .time-title {
@@ -319,6 +357,7 @@ section header {
 
 .video-section .volume-bar {
   -webkit-appearance: none;
+  -moz-appearance: none;
   width: 40px;
   background: #e91e63;
   height: 2px;
@@ -341,11 +380,17 @@ section header {
 
 .video-section .seek-bar {
   -webkit-appearance: none;
+  height: 5px;
   width: 320px;
   position: absolute;
-  bottom: 60px;
+  bottom: 65px;
   left: 0;
-  background: none;
+  margin: 0;
+}
+
+.video-section .seek-bar::before {
+  content: "";
+  background: #e91e63;
 }
 
 .video-section .seek-bar::-webkit-slider-runnable-track {
@@ -359,6 +404,12 @@ section header {
   background: url("../img/controls.png");
   background-repeat: no-repeat;
   background-position: -150px 0px;
+}
+
+.video-section input[type = range]::-moz-range-progress,
+.audio-section input[type = range]::-moz-range-progress {
+  background: #e91e63;
+  height: 5px;
 }
 
 /*calendar*/
@@ -385,6 +436,7 @@ section header {
   text-transform: uppercase;
   text-align: center;
   font-size: 0.750em;
+  cursor: pointer;
 }
 
 .calendar main {
@@ -400,10 +452,9 @@ section header {
 .today {
   border-radius: 50%;
   background: #e91e63;
-  height: 25px;
-  width: 25px;
-  display: table-cell;
-  vertical-align: middle;
+  padding: 5px;
+  min-width: 15px;
+  display: inline-block;
 }
 
 .scheduled {
@@ -590,7 +641,7 @@ section header {
 .sales-volume li {
   display: inline-block;
   text-transform: uppercase;
-  margin-right: 100px;
+  margin-right: 90px;
 }
 
 .sales-volume li:last-child {
@@ -627,17 +678,17 @@ section header {
   margin-bottom: 20px;
 }
 
-.activity label.custom-radio input{
+.activity label.custom-radio input {
    display: none;
 }
 
-.activity label.custom-radio input + button {
+.activity label.custom-radio input + div {
   height: 25px;
   width: 30px;
   opacity: 0.5;
 }
 
-.activity label.custom-radio input:checked + button {  
+.activity label.custom-radio input:checked + div {  
   opacity: 1;
 }
 
@@ -964,18 +1015,24 @@ section header {
   margin-left: 10px;
 }
 
-.schedule label.custom-radio input{
+.schedule label {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.schedule label.custom-radio input {
    display: none;
 }
 
-.schedule label.custom-radio input + button {
+.schedule label.custom-radio input + div {
   background-color: #283593;
   border-radius: 50%;
   height: 25px;
   width: 25px;
 }
 
-.schedule label.custom-radio input:checked + button {  
+.schedule label.custom-radio input:checked + div {  
   background-color: #fbc02d;
   border-radius: 50%;
   height: 25px;

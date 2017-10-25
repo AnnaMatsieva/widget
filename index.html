@@ -8,16 +8,17 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,700,900" rel="stylesheet">
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" role="main" aria-label="Widgets">
 
-			<section class="weather" aria-label="Widget about weather" role="main">
+			<section class="weather" role="widget" aria-labelledby="widget-title"  aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Widget about weather. Use slider if you want to change the time.</span>
 				<header class="contain">
-					<p class="left header-title">Madrid</p>
+					<p class="left header-title" id="widget-title" aria-label="Places Madrid">Madrid</p>
 					<div class="right">
 						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
 				</header>
-				<main>
+				<main tabindex="0" aria-label="Places - Madrid. 24 degrees. 12:00">
 					<p class="degree">24&deg;</p>
 					<div class="forecast"></div>
 				</main>
@@ -33,14 +34,15 @@
 				</footer>
 			</section>
 
-			<section class="weather" aria-label="Widget about weather" role="main">		
+			<section class="weather" role="widget" aria-labelledby="widget-title"  aria-describedby="widget-description" tabindex="0">	
+				<span class="wcag-hidden" id="widget-description">Widget about weather. Use slider if you want to change the time.</span>	
 				<header class="contain">
-					<p class="left header-title">Himalays</p>
+					<p class="left header-title" id="widget-title" aria-label="Places Himalays">Himalays</p>
 					<div class="right">
 						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
 				</header>
-				<main>
+				<main tabindex="0" aria-label="Places - Himalays. -18 degrees. 21:00">
 					<p class="degree">-18&deg;</p>
 					<div class="forecast forecast-mountains"></div>
 				</main>
@@ -56,10 +58,12 @@
 				</footer>
 			</section>
 
-			<section class="audio-section" aria-label="Widget for music" role="main">		
-				<header class="contain">
-					<p class="left header-title">Nirvana</p>
-					<div class="right time-title">
+			<section class="audio-section" role="widget" aria-labelledby="widget-title" aria-describedby="widget-description" tabindex="0">	
+				<span class="wcag-hidden" id="widget-description">Music player</span>
+				<header class="contain left">
+					<p class="header-title" id="widget-title" tabindex="0">Nirvana</p>
+					<p class="song-name">Lithium</p>
+					<div class="right time-title" role="timer">
 						<time class="passed">01:24</time>
 							<span>/</span>
 						<time class="all-time">3:55</time>
@@ -67,6 +71,7 @@
 				</header>
 				<main>
 					<div class="audio-container">
+						<img src="img/audio.png" alt="Music play">
 						<audio class="audio">
 						    <source src="audio/" type="audio/ogg; codecs=vorbis">
 						    <source src="audio/" type="audio/mpeg">
@@ -78,18 +83,16 @@
 						<form>
 							<input type="range" class="seek-bar" value="0" aria-label="Drag the time slider">
 							<button type="button" class="prev controls" aria-label="Previous record"></button>
-						    <button type="button" class="play-pause controls" aria-label="Play and pause record"></button>
+						    <button type="button" class="play-pause controls" aria-label="Play and pause record. playback will start from 10 seconds"></button>
 						    <button type="button" class="stop controls" aria-label="Stop recording"></button>
 						    <button type="button" class="next controls" aria-label="Next record"></button>
-						    <button type="button" class="mute controls" aria-label="Turn off or turn on mute"></button>
-						    <input type="range" class="volume-bar" min="0" max="1" step="0.1" value="1" aria-label="Change volume">
-						    <button type="button" class="shuffle controls" aria-label="Mix records"></button>
+						    <button type="button" class="mute controls" aria-label="Turn off or turn on mute"></button>						<button type="button" class="shuffle controls" aria-label="Mix records"></button>
 						</form>
 					 </div>
 				</main>
 			</section>
 				
-			<section class="video-section" aria-label="Widget for video" role="main">		
+			<section class="video-section" role="widget" aria-describedby="widget-description" tabindex="0">		<span class="wcag-hidden" id="widget-description">Video player</span>
 				<main>
 					<div class="video-container">
 						<video class="video">
@@ -103,8 +106,8 @@
 						</video>
 						<div class="video-controls">
 							<form>
-							    <button type="button" class="play-pause controls" aria-label="Play and pause record"></button>
-							    <span class="time-title">
+							    <button type="button" class="play-pause controls" aria-label="Play and pause record. playback will start from 10 seconds"></button>
+							    <span class="time-title" role="timer">
 							    	<time class="passed">03:29</time>
 								    <span>/</span>
 								    <time class="all-time">04:25</time>
@@ -119,12 +122,13 @@
 				</main>
 			</section>
 
-			<section class="calendar" aria-label="Calendar widget" role="main">		
+			<section class="calendar" role="widget"  aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Calendar where you can add information.</span>
 				<header class="contain">
-					<select class="left header-title">
-						<option>June 2015</option>
-						<option>July 2015</option>
-						<option>August 2015</option>
+					<select class="left header-title" role="listbox">
+						<option role="option">June 2015</option>
+						<option role="option">July 2015</option>
+						<option role="option">August 2015</option>
 					</select>
 					<div class="right">
 						<button class="right-icons plus"  aria-label="Menu with information"></button>
@@ -134,69 +138,70 @@
 					<table class="calendar-table">
 						<thead>
 							<tr>
-								<th scope="col"><a href="">Mon</a></th>
-								<th scope="col"><a href="">Tue</a></th>
-								<th scope="col"><a href="">Wed</a></th>
-								<th scope="col"><a href="">Thu</a></th>
-								<th scope="col"><a href="">Fri</a></th>
-								<th scope="col"><a href="">Sat</a></th>
-								<th scope="col"><a href="">Sun</a></th>
+								<th scope="col">Mon</th>
+								<th scope="col">Tue</th>
+								<th scope="col">Wed</th>
+								<th scope="col">Thu</th>
+								<th scope="col">Fri</th>
+								<th scope="col">Sat</th>
+								<th scope="col">Sun</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td><a href=""><span></span></a></td>
-								<td><a href=""><span></span></a></td>
-								<td><a href=""><span></span></a></td>
-								<td><a href=""><span></span></a></td>
-								<td><a href=""><span class="passed scheduled">1</span></a></td>
-								<td><a href=""><span class="passed">2</span></a></td>
-								<td><a href=""><span class="passed">3</span></a></td>
+								<td><span></span></td>
+								<td><span></span></td>
+								<td><span></span></td>
+								<td><span></span></td>
+								<td tabindex="0" aria-label="Passed date"><span class="passed scheduled">1</span></td>
+								<td tabindex="0"><span class="passed">2</span></td>
+								<td tabindex="0"><span class="passed">3</span></td>
 							</tr>
 							<tr>
-								<td><a href=""><span class="passed">4</span></a></td>
-								<td><a href=""><span class="passed">5</span></a></td>
-								<td><a href=""><span class="passed">6</span></a></td>
-								<td><a href=""><span class="passed">7</span></a></td>
-								<td><a href=""><span class="passed">8</span></a></td>
-								<td><a href=""><span class="passed">9</span></a></td>
-								<td><a href="" aria-label="Today's date"><span class="today scheduled">10</span></a></td>
+								<td tabindex="0"><span class="passed">4</span></td>
+								<td tabindex="0"><span class="passed">5</span></td>
+								<td tabindex="0"><span class="passed">6</span></td>
+								<td tabindex="0"><span class="passed">7</span></td>
+								<td tabindex="0"><span class="passed">8</span></td>
+								<td tabindex="0"><span class="passed">9</span></td>
+								<td tabindex="0" aria-label="Today's date"><span class="today scheduled">10</span></td>
 							</tr>
 							<tr>
-								<td><a href=""><span>11</span></a></td>
-								<td><a href=""><span class="scheduled" aria-label="Frank's Birthday">12</span></a></td>
-								<td><a href=""><span>13</span></a></td>
-								<td><a href=""><span>14</span></a></td>
-								<td><a href=""><span>15</span></a></td>
-								<td><a href=""><span>16</span></a></td>
-								<td><a href=""><span>17</span></a></td>
+								<td tabindex="0"><span>11</span></a></td>
+								<td tabindex="0" aria-label="Frank's Birthday"><span class="scheduled">12</span></td>
+								<td tabindex="0"><span>13</span></td>
+								<td tabindex="0"><span>14</span></td>
+								<td tabindex="0"><span>15</span></td>
+								<td tabindex="0"><span>16</span></td>
+								<td tabindex="0"><span>17</span></td>
 							</tr>
 							<tr>
-								<td><a href=""><span class="scheduled">18</span></a></td>
-								<td><a href=""><span>19</span></a></td>
-								<td><a href=""><span>20</span></a></td>
-								<td><a href=""><span>21</span></a></td>
-								<td><a href=""><span>22</span></a></td>
-								<td><a href=""><span>23</span></a></td>
-								<td><a href=""><span>24</span></a></td>
+								<td tabindex="0"><span class="scheduled">18</span></td>
+								<td tabindex="0"><span>19</span></td>
+								<td tabindex="0"><span>20</span></td>
+								<td tabindex="0"><span>21</span></td>
+								<td tabindex="0"><span>22</span></td>
+								<td tabindex="0"><span>23</span></td>
+								<td tabindex="0"><span>24</span></td>
 							</tr>
 							<tr>
-								<td><a href=""><span>25</span></a></td>
-								<td><a href=""><span>26</span></a></td>
-								<td><a href=""><span>27</span></a></td>
-								<td><a href=""><span>28</span></a></td>
-								<td><a href=""><span>29</span></a></td>
-								<td><a href=""><span>30</span></a></td>
-								<td><a href=""><span>31</span></a></td>
+								<td tabindex="0"><span>25</span></td>
+								<td tabindex="0"><span>26</span></td>
+								<td tabindex="0"><span>27</span></td>
+								<td tabindex="0"><span>28</span></td>
+								<td tabindex="0"><span>29</span></td>
+								<td tabindex="0"><span>30</span></td>
+								<td tabindex="0"><span>31</span></td>
 							</tr>
 						</tbody>
 					</table>
 				</main>
 			</section>
 
-			<section class="got-to-do" aria-label="Widget got to do" role="main">
+			<section class="got-to-do" role="widget" aria-labelledby="widget-title" aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Widget got to do</span>
 				<header class="contain">
-					<p class="left header-title">Got to do...</p>
+					<p class="left header-title" id="widget-title" tabindex="0">Got to do...</p>
 					<div class="right">
 						<button class="right-icons info" aria-label="Menu with information"></button>
 					</div>
@@ -206,21 +211,21 @@
 						<li>
 							<label class="custom-checkbox" for="got-do">
 								<input id="got-do" name="got-do" value="1" type="checkbox" checked aria-checked="true" />
-								<button aria-label="Restaurant reservation"></button>
+								<button aria-label="Restaurant reservation checked"></button>
 								Restaurant reservations
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="got-do1">
 								<input id="got-do1" name="got-do" value="1" type="checkbox" />
-								<button aria-label="Fix the broken door"></button>
+								<button aria-label="Fix the broken door unchecked"></button>
 								Fix the broken door
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="got-do2">
 								<input id="got-do2" name="got-do" value="1" type="checkbox" />
-								<button aria-label="Buy new batteries"></button>
+								<button aria-label="Buy new batteries unchecked"></button>
 								Buy new batteries
 							</label>
 						</li>
@@ -229,9 +234,10 @@
 				</main>
 			</section>
 
-			<section class="remind-me" aria-label="Widget remind me" role="main">
+			<section class="remind-me" role="widget" aria-labelledby="widget-title"  aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Widget remind me</span>
 				<header class="contain">
-					<p class="left header-title">Remind me to...</p>
+					<p class="left header-title" id="widget-title" tabindex="0">Remind me to...</p>
 					<div class="right">
 						<button class="right-icons info"  aria-label="Menu with information"></button>
 					</div>
@@ -241,21 +247,21 @@
 						<li>
 							<label class="custom-checkbox" for="remind">
 								<input id="remind" name="remind" value="1" type="checkbox" checked aria-checked="true" />
-								<button aria-label="Pick ap the Tickets at 16:00"></button>
+								<button aria-label="Pick ap the Tickets at 16:00 checked"></button>
 								Pick ap the Tickets at 16:00
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="remind2">
 								<input id="remind2" name="remind" value="2" type="checkbox" />
-								<button aria-label="Meeting with David at 17:00"></button>
+								<button aria-label="Meeting with David at 17:00 unchecked"></button>
 								Meeting with David at 17:00
 							</label>
 						</li>
 						<li>
 							<label class="custom-checkbox" for="remind3">
 								<input id="remind3" name="remind" value="3" type="checkbox" />
-								<button aria-label="Send Email to Sarah"></button>
+								<button aria-label="Send Email to Sarah unchecked"></button>
 								Send Email to Sarah
 							</label>
 						</li>
@@ -264,9 +270,10 @@
 				</main>
 			</section>
 
-			<section class="celebration" aria-label="Widget reminds of holidays" role="main">
+			<section class="celebration" role="widget" aria-labelledby="widget-title"  aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Widget reminds of holidays</span>
 				<header class="contain">
-					<p class="left header-title">Friday</p>
+					<p class="left header-title" id="widget-title" tabindex="0">Friday</p>
 					<div class="right">
 						<p>12.06.15</p>
 					</div>
@@ -275,15 +282,16 @@
 					<figure>
 						<img src="img/cake.png" alt="Birthday cake">
 						<figcaption>
-							<p class="celebrate-name">James Birthday</p>
+							<p class="celebrate-name" tabindex="0">James Birthday</p>
 						</figcaption>
 					</figure>
 				</main>
 			</section>
 
-			<section class="sales-volume" aria-label="Widget with graph dependency" role="main">
+			<section class="sales-volume" role="widget" aria-labelledby="widget-title"  aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Widget with graph dependency</span>
 				<header class="contain">
-					<p class="left header-title">Sales volume</p>
+					<p class="left header-title" id="widget-title" tabindex="0">Sales volume</p>
 					<div class="right">
 						<p class="graph-a">Store A</p>
 						<p class="graph-b">Store B</p>
@@ -303,18 +311,19 @@
 				</main>
 			</section>
 
-			<section class="activity" aria-label="Sports widget" role="main">
+			<section class="activity" role="widget" aria-labelledby="widget-title" aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Sports widget</span>
 				<header class="contain">
-					<p class="left header-title">Activity</p>
+					<p class="left header-title" id="widget-title" tabindex="0">Activity</p>
 					<div class="right">
-						<form>
-							<label class="custom-radio" for="bicicle">
-								<input id="bicicle" name="type" value="1" type="radio" checked aria-checked="true" />
-								<button class="right-icons bicicle" aria-label="Use bicicle activity"></button>
+						<form role="radiogroup">
+							<label class="custom-radio" for="bicicle" tabindex="0">
+								<input id="bicicle" name="type" value="1" type="radio" checked aria-checked="true" role="radio" />
+								<div class="right-icons bicicle" aria-label="Use bicicle activity checked"></div>
 							</label>
-							<label class="custom-radio" for="men">
-								<input id="men" name="type" value="2" type="radio" />
-								<button class="right-icons men" aria-label="Use sample activity"></button>
+							<label class="custom-radio" for="men" tabindex="0">
+								<input id="men" name="type" value="2" type="radio" role="radio" />
+								<div class="right-icons men" aria-label="Use sample activity unchecked"></div>
 							</label>
 						</form>
 					</div>
@@ -327,9 +336,10 @@
 				</main>
 			</section>
 
-			<section class="rating" aria-label="Rating widget" role="main">
+			<section class="rating" role="widget" aria-labelledby="widget-title" aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Rating widget</span>
 				<header class="contain">
-					<p class="left header-title">Rating</p>
+					<p class="left header-title" id="widget-title" tabindex="0">Rating</p>
 				</header>
 				<main  class="contain">
 					<ul>
@@ -397,57 +407,59 @@
 				</main>
 			</section>
 
-			<section class="calculator" aria-label="Widget calculator" role="main">
+			<section class="calculator" role="widget" aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Widget calculator</span>
 				<header>
 					<form>
-						<input type="text" value="325.075">
+						<input type="number" value="325.075">
 					</form>
 				</header>
 				<main>
 					<table class="calculator-table">
 						<tr>
-							<td><button>cc</button></td>
-							<td><button>ce</button></td>
-							<td><button>c</button></td>
-							<td><button>+-</button></td>
-							<td><button>pp</button></td>
+							<td><button aria-label="cc">cc</button></td>
+							<td><button ariaf-label="ce">ce</button></td>
+							<td><button aria-label="c">c</button></td>
+							<td><button aria-lapel="plus minus">&plusmn;</button></td>
+							<td><button aria-label="radical">&radic;</button></td>
 						</tr>
 						<tr>
-							<td><button>7</button></td>
-							<td><button>8</button></td>
-							<td><button>9</button></td>
-							<td><button>/</button></td>
-							<td><button>%</button></td>
+							<td><button aria-label="7">7</button></td>
+							<td><button aria-label="8">8</button></td>
+							<td><button aria-label="9">9</button></td>
+							<td><button aria-label="division">/</button></td>
+							<td><button aria-label="percent">%</button></td>
 						</tr>
 						<tr>
-							<td><button>4</button></td>
-							<td><button>5</button></td>
-							<td><button>6</button></td>
-							<td><button>*</button></td>
-							<td><button>1/x</button></td>
+							<td><button aria-label="4">4</button></td>
+							<td><button aria-label="5">5</button></td>
+							<td><button aria-label="6">6</button></td>
+							<td><button aria-label="multiplication">*</button></td>
+							<td><button aria-label="1/x">1/x</button></td>
 						</tr>
 						<tr>
-							<td><button>1</button></td>
-							<td><button>2</button></td>
-							<td><button>3</button></td>
-							<td><button>-</button></td>
+							<td><button aria-label="1">1</button></td>
+							<td><button aria-label="2">2</button></td>
+							<td><button aria-label="3">3</button></td>
+							<td><button aria-label="minus">-</button></td>
 							<td><button></button></td>
 						</tr>
 						<tr>
-							<td class="zero-calculate" colspan="2"><button>0</button></td>
-							<td><button>.</button></td>
-							<td><button>+</button></td>
-							<td><button class="equally" aria-label="Result">=</button></td>
+							<td class="zero-calculate" colspan="2"><button aria-label="zero">0</button></td>
+							<td><button aria-label="dot">.</button></td>
+							<td><button aria-label="plus">+</button></td>
+							<td><button class="equally" aria-label="equally">=</button></td>
 						</tr>
 					</table>
 				</main>
 			</section>
 
-			<section class="country" aria-label="Widget shows the tome" role="main">
+			<section class="country" role="widget" aria-labelledby="widget-title"  aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Widget shows the time</span>
 				<header class="contain">
-					<select class="left header-title">
-						<option>New York</option>
-						<option>Paris</option>
+					<select class="left header-title" role="listbox" id="widget-title">
+						<option role="option">New York</option>
+						<option role="option">Paris</option>
 					</select>
 					<div class="right">
 						<button class="right-icons clock" aria-label="Clock icon"></button>
@@ -461,10 +473,11 @@
 				</main>
 			</section>
 
-			<section class="starts-in clearfix" aria-label="Timer widget" role="main">
+			<section class="starts-in clearfix" role="widget" aria-labelledby="widget-title" aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Timer widget</span>
 				<div class="contain">
 					<header>
-						<p class="left header-title">Starts in</p>
+						<p class="left header-title" id="widget-title" tabindex="0">Starts in</p>
 					</header>
 				</div>
 				<div class="first-half">
@@ -477,36 +490,38 @@
 				</div>
 			</section>
 
-			<section class="translate" aria-label="Translation widget" role="main">
+			<section class="translate" role="widget" aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Translation widget</span>
 				<header>
-					<input type="text" value="Bem-vindo ao Rio de Janeiro" />
+					<input type="text" value="Bem-vindo ao Rio de Janeiro" role="input" />
 				</header>
 				<main class="contain">
-					<select>
-						<option>English</option>
-						<option>France</option>
+					<select role="listbox">
+						<option role="option">English</option>
+						<option role="option">France</option>
 					</select>
 					<p>Welcome to Rio de Janeiro</p>
 					<button class="right-icons translation" aria-label="Translate text into English language"></button>
 				</main>
 			</section>
 
-			<section class="schedule" aria-label="Airplane schedule widget" role="main">
+			<section class="schedule" role="widget" aria-labelledby="widget-title" aria-describedby="widget-description" tabindex="0">
+				<span class="wcag-hidden" id="widget-description">Airplane schedule widget</span>
 				<header class="contain">
-					<p class="left header-title">Departure</p>
-					<div class="right">
-						<label class="custom-radio" for="departure">
-							<input id="departure" name="type" value="1" type="radio" checked aria-checked="true" />
-							<button class="right-icons departure" aria-label="Departure checked"></button>
+					<p class="left header-title" id="widget-title" tabindex="0">Departure</p>
+					<form class="right" role="radiogroup">
+						<label class="custom-radio" for="departure" tabindex="0">
+							<input id="departure" name="type" value="1" type="radio" checked aria-checked="true" role="radio" />
+							<div class="right-icons departure" aria-label="Departure checked"></div>
 						</label>
-						<label class="custom-radio" for="arrival">
-							<input id="arrival" name="type" value="2" type="radio" />
-							<button class="right-icons arrival" aria-label="Arrival checked"></button>
+						<label class="custom-radio" for="arrival" tabindex="0">
+							<input id="arrival" name="type" value="2" type="radio" role="radio" />
+							<div class="right-icons arrival" aria-label="Arrival checked"></div>
 						</label>
-					</div>
+					</form>
 				</header>
 				<main>
-					<p class="date">28.6</p>
+					<p class="date" tabindex="0">28.6</p>
 				</main>
 				<footer class="contain plain">
 					<time datetime="16:15">
