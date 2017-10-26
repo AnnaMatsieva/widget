@@ -800,7 +800,7 @@ section header {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  padding: 12px 23px;
+  padding: 10px 23px;
 }
 
 .calculator .equally {
@@ -822,7 +822,7 @@ section header {
 }
 
 .zero-calculate button {
-  padding: 16px 63px;
+  padding: 18px 63px;
 }
 
 /*Country*/
