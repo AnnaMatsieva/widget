@@ -1,13 +1,10 @@
-html,
 body {
   height: 100%;
   margin: 0 auto;
   border: 0;
   padding: 0;
-  font-size: 1em;
   color: #000;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
+  font: normal 700 1em 'Lato', sans-serif;
   background: #dedfc7;
 }
 
@@ -68,7 +65,7 @@ section {
   position: relative;
 }
 
-section:nth-child(4n) {
+section:nth-of-type(4n) {
   margin-right: 0;
 }
 
@@ -96,17 +93,16 @@ section header {
 
 .add::after {
   content: "";
-  background: url("../img/icons.png") no-repeat;
+  background: url("../img/icons.png") no-repeat 2px -23px;
   width: 18px;
   height: 18px;
   display: block;
-  background-position: 2px -23px;
 }
 
 .right {
   position: absolute;
-  top: 20px;/**/
-  right: 20px;/**/
+  top: 20px;
+  right: 20px;
   color: #fff;
 }
 
@@ -116,27 +112,27 @@ section header {
 }
 
 .right-icons {
-  background: none;
   border: none;
-  background-image: url("../img/icons.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons.png") no-repeat transparent;
   cursor: pointer;
 }
 
 .info {
-  height: 18px;
+  height: 25px;
+  width: 25px;
+  background-position: 6px 3px;
 }
 
 .plus {
-  background-position: -3px -24px;
-  height: 15px;
-  width: 15px;
+  background-position: 2px -19px;
+  height: 25px;
+  width: 25px;
 }
 
 .clock {
-  background-position: -3px -225px;
-  height: 18px;
-  width: 18px;
+  background-position: 0px -222px;
+  height: 25px;
+  width: 25px;
 }
 
 /*weather*/
@@ -212,9 +208,7 @@ section header {
   -webkit-appearance: none;
   height: 25px;
   width: 18px;
-  background: url("../img/icons.png");
-  background-repeat: no-repeat;
-  background-position: -3px -95px;
+  background: url("../img/icons.png") no-repeat -3px -95px;
 }
 
 /*audio / video*/
@@ -254,31 +248,31 @@ section header {
 }
 
 .audio-section button {
-  margin: 0 11px;
+  margin: 10px 11px;
 }
 
 .audio-section .prev {
-  background-position: 0 0;
+  background-position: 2px -5px;
 }
 
 .audio-section .play-pause {
-  background-position: -25px 0;
+  background-position: -22px -5px;
 }
 
 .audio-section .stop {
-  background-position: -50px 0;
+  background-position: -47px -5px;
 }
 
 .audio-section .next {
-  background-position: -75px 0;
+  background-position: -72px -5px;
 }
 
 .audio-section .mute {
-  background-position: -100px 0;
+  background-position: -95px -5px;
 }
 
 .audio-section .shuffle {
-  background-position: -125px 0;
+  background-position: -122px -5px;
 }
 
 .audio-section .volume-bar {
@@ -312,9 +306,7 @@ section header {
   -webkit-appearance: none;
   height: 35px;
   width: 30px;
-  background: url("../img/controls.png");
-  background-repeat: no-repeat;
-  background-position: -150px 0px;
+  background: url("../img/controls.png") no-repeat -150px 0px;
 }
 
 .audio-section input[type = range]::-moz-range-progress,
@@ -354,13 +346,19 @@ section header {
 }
 
 .video-section .play-pause{
-  background-position: -195px 3px;
+  background-position: -193px -4px;
   padding-left: 20px;
+  top: 8px;
+  position: relative;
 }
 
 .video-section .mute {
-  background-position: -220px 0;
+  background-position: -220px -4px;
   margin-left: 50px;
+  position: relative;
+  top: 4px;
+  position: relative;
+  top: 8px;
 }
 
 .video-section .volume-bar {
@@ -370,7 +368,7 @@ section header {
   background: #e91e63;
   height: 2px;
   position: relative;
-  top: -8px;
+  top: -4px;
 }
 
 .video-section .volume-bar::-webkit-slider-runnable-track {
@@ -382,8 +380,10 @@ section header {
 }
 
 .video-section .full-screen {
-  background-position: -247px 0;
+  background-position: -247px -4px;
   float: right;
+  position: relative;
+  top: 8px;
 }
 
 .video-section .seek-bar {
@@ -409,9 +409,7 @@ section header {
   -webkit-appearance: none;
   height: 35px;
   width: 30px;
-  background: url("../img/controls.png");
-  background-repeat: no-repeat;
-  background-position: -150px 0px;
+  background: url("../img/controls.png") no-repeat -150px 0px;
 }
 
 .video-section input[type = range]::-moz-range-progress,
@@ -510,30 +508,23 @@ section header {
   border: none;
 }
 
-.got-to-do label.custom-checkbox input {
+.got-to-do input {
    display: none;
 }
 
-.got-to-do label.custom-checkbox input + button {
-  background: none;
+.got-to-do input + span {
   border: none;
-  background-image: url("../img/icons.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons.png") no-repeat 0 -385px transparent;
   cursor: pointer;
-  background-position: 0 -385px;
   width: 20px;
   height: 15px;
   display: inline-block;
   vertical-align: bottom;
 }
 
-.got-to-do label.custom-checkbox input:checked + button {
-  background: none;
+.got-to-do input:checked + span{
   border: none;
-  background-image: url("../img/icons.png");
-  background-repeat: no-repeat;
-  cursor: pointer;
-  background-position: 0 -367px;
+  background: url("../img/icons.png") no-repeat 0 -367px transparent;
   width: 20px;
   height: 15px;
   display: inline-block;
@@ -575,30 +566,26 @@ section header {
   background: #e91e63;
 }
 
-.remind-me label.custom-checkbox input {
+.remind-me input {
    display: none;
 }
 
-.remind-me label.custom-checkbox input + button {
+.remind-me input + span {
   background: none;
   border: none;
-  background-image: url("../img/icons.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons.png") no-repeat 0 -72px;
   cursor: pointer;
-  background-position: 0 -72px;
   width: 25px;
   height: 20px;
   display: inline-block;
   vertical-align: bottom;
 }
 
-.remind-me label.custom-checkbox input:checked + button {
+.remind-me input:checked + span {
   background: none;
   border: none;
-  background-image: url("../img/icons.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons.png") no-repeat 0 -47px;
   cursor: pointer;
-  background-position: 0 -47px;
   width: 25px;
   height: 20px;
   display: inline-block;
@@ -696,17 +683,17 @@ section header {
   margin-bottom: 20px;
 }
 
-.activity label.custom-radio input {
+.activity input {
    display: none;
 }
 
-.activity label.custom-radio input + div {
+.activity input + div {
   height: 25px;
   width: 30px;
   opacity: 0.5;
 }
 
-.activity label.custom-radio input:checked + div {  
+.activity input:checked + div {  
   opacity: 1;
 }
 
@@ -827,9 +814,7 @@ section header {
 
 /*Country*/
 .country {
-  background-color: #e91e63;
-  background-image: url("../img/statue.jpg");
-  background-repeat: no-repeat;
+  background: url("../img/statue.jpg") no-repeat #e91e63;
   color: #fff;
 }
 
@@ -951,11 +936,10 @@ section header {
 
 .translation::after {
   content: "";
-  background: url("../img/icons.png") no-repeat;
+  background: url("../img/icons.png") no-repeat 0px -250px;
   width: 22px;
   height: 21px;
   display: block;
-  background-position: 0px -250px;
 }
 
 /*Shedule*/
@@ -993,10 +977,9 @@ section header {
   position: absolute;
   top: 15px;
   left: 160px;
-  background: url(../img/icons.png) no-repeat;
-  background-position: 0 -327px;
+  background: url(../img/icons.png) no-repeat 0 -325px;
   width: 45px;
-  height: 27px;
+  height: 30px;
 }
 
 .country-fly {
@@ -1042,18 +1025,18 @@ section header {
   margin-left: 10px;
 }
 
-.schedule label.custom-radio input {
+.schedule input {
    display: none;
 }
 
-.schedule label.custom-radio input + div {
+.schedule input + div {
   background-color: #283593;
   border-radius: 50%;
   height: 25px;
   width: 25px;
 }
 
-.schedule label.custom-radio input:checked + div {  
+.schedule input:checked + div {  
   background-color: #fbc02d;
   border-radius: 50%;
   height: 25px;
